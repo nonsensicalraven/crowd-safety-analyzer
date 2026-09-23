@@ -1,0 +1,25 @@
+# Secrets -- never commit
+.env
+
+# YOLO weights -- auto-downloaded from Hugging Face on first run
+# (see detection.py _resolve_yolo_weights / config.py hf_model_id).
+# Committing a 6MB binary model file to git is unnecessary churn;
+# every teammate's first run fetches and caches it automatically.
+# If your machine has no network access to huggingface.co, copy
+# best.pt in manually instead -- it will NOT be tracked by git either
+# way, so do this locally, don't try to force-add it.
+best.pt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local/dev database files (only relevant if DATABASE_URL points at
+# sqlite for quick local testing instead of Postgres)
+*.db
+
+# Editors
+.idea/
+.vscode/

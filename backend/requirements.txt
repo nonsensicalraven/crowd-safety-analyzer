@@ -1,0 +1,24 @@
+# --- backend / API / database ---
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+SQLAlchemy==2.0.52
+pydantic==2.13.5
+pydantic-settings==2.7.1
+python-dotenv==1.2.2
+websockets==17.1
+python-multipart==0.0.20
+psycopg[binary]==3.2.3
+
+# --- AI subsystem (Kushal's pipeline, merged in) ---
+opencv-python==4.10.0.84
+numpy==2.1.3
+scikit-learn==1.5.2
+huggingface_hub==0.26.2
+loguru==0.7.3
+
+# torch + ultralytics must be installed separately -- see README
+# "Installing the AI dependencies" for platform-specific instructions
+# (CPU vs CUDA). On Windows + CUDA:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# Then:
+#   pip install ultralytics
